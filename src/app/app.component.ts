@@ -1,4 +1,4 @@
-import {Component, input} from '@angular/core';
+import {Component, Input, input} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -13,6 +13,9 @@ import { RouterOutlet } from '@angular/router';
 })
 export class ChildComponent {
   text = input('default value');
+
+  @Input()
+  text2 = '';
 
   log() {
     console.log(this.text);
