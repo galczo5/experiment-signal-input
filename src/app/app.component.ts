@@ -1,6 +1,11 @@
 import {Component, Input, input} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
+function input3() {
+  let text3 = input('default value 3')
+  return text3;
+}
+
 @Component({
   selector: 'app-child',
   standalone: true,
@@ -17,6 +22,7 @@ export class ChildComponent {
   @Input()
   text2 = '';
 
+  text3 = input3();
   log() {
     console.log(this.text);
   }
